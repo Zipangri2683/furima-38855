@@ -27,7 +27,7 @@
 | item_status    | string     | null: false                    |
 | shipping_cost  | string     | null: false                    |
 | prefecture     | string     | null: false                    |
-| scheduled_date | date       | null: false                    |
+| delivery_date  | date       | null: false                    |
 
 ### Association
 - belongs_to :user
