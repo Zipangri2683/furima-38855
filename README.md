@@ -50,8 +50,8 @@
 | Column         | Type         | Options                        |
 | ---------------| -------------|--------------------------------|
 | order          | references   | null: false, foreign_key: true |
-| postal_code    | text         | null: false                    |
-| prefecture_id  | string       | null: false                    |
+| postal_code    | string       | null: false                    |
+| prefecture_id  | integer      | null: false                    |
 | city           | string       | null: false                    |
 | block          | string       | null: false                    |
 | building       | string       |                                |
