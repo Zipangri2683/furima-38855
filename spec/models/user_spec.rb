@@ -101,7 +101,7 @@ RSpec.describe User, type: :model do
         it '生年月日が空欄だと保存できない' do
           @user.birthday = ''
           @user.valid?
-          expect(@user.errors.full_messages).to include(binding.pry"Birthday can't be blank")
+          expect(@user.errors.full_messages).to include("Birthday can't be blank")
         end
       end
     end
