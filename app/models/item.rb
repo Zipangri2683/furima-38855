@@ -1,8 +1,9 @@
 class Item < ApplicationRecord
+  belongs_to :user
   extend ActiveHash::Associations::ActiveRecordExtensions
   # テーブルとのアソシエーション
-  belongs_to :user
-  has_one    :order
+  
+  # has_one    :order
   # has_many :comments
 
   # アクティブハッシュとのアソシエーション
@@ -21,8 +22,7 @@ class Item < ApplicationRecord
     validates :name
     validates :description
     validates :image
-    # 300円以上かつ9,999,999円以下で、半角数字でないと入力不可
-    validates :price, numericality: {only_integer: true, greater_than_or_equal_to: 300, less_than_or_equal_to: 9999999}
+    validates :price, numericality:{only_integer: true, greater_than_or_equal_to: 300, less_than_or_equal_to: 9999999 }
   end
 
   # ジャンルの選択が「--」の時は保存不可
@@ -33,5 +33,4 @@ class Item < ApplicationRecord
     validates :shipping_cost_id
     validates :delivery_date_id
   end
-
 end

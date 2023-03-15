@@ -13,6 +13,11 @@ describe 'アイテムの保存' do
     end
   end
   context 'アイテムが保存できない場合' do
+    it 'ユーザー登録している人でないと登録できない' do
+      @item.user = nil
+      @item.valid?
+      expect(@item.errors.full_messages).to include("User must exist")
+    end
     it "imageが空だと登録できない" do
       @item.image = nil
       @item.valid?

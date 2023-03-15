@@ -1,7 +1,6 @@
 FactoryBot.define do
   factory :item do
     association :user
-    # image { Rack::Test::UploadedFile.new("#{Rails.root}/spec/fixtures/") }
     name { Faker::Name.name }
     description { Faker::Lorem.sentence }
     category_id { Faker::Number.between(from: 1, to: 10) }
