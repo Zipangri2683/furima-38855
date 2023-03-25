@@ -55,7 +55,7 @@
 | city           | string       | null: false                    |
 | block          | string       | null: false                    |
 | building       | string       |                                |
-| tel            | string       | null: false                    |
+| phone_number   | string       | null: false                    |
 
 ### Association
 - belongs_to :order
