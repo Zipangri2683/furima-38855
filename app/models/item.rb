@@ -1,13 +1,12 @@
 class Item < ApplicationRecord
   belongs_to :user
-  extend ActiveHash::Associations::ActiveRecordExtensions
-  # テーブルとのアソシエーション
   
-  # has_one    :order
+  # テーブルとのアソシエーション
+  has_one    :order
   # has_many :comments
 
   # アクティブハッシュとのアソシエーション
-  
+  extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :category
   belongs_to :prefecture
   belongs_to :item_status
