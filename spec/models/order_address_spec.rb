@@ -22,7 +22,7 @@ RSpec.describe OrderAddress, type: :model do
       it 'postal_codeが空だと保存できないこと' do
         @order_address.postal_code = ''
         @order_address.valid?
-        expect(@order_address.errors.full_messages).to include("Postal code can't be blank")
+        expect(@order_address.errors.full_messages).to include('郵便番号を入力してください')
       end
       it 'postal_codeが意図しない形ならNG（全角）' do
         @order_address.postal_code = '１１１ー１１１１'
